@@ -1,3 +1,35 @@
-<app-layout></app-layout>
+<div class="container">
+  <h1>Usermap for {{userMap.title}}</h1>
+  <p><strong>Author:</strong> {{userMap.author}}</p>
+  <p><strong>Description:</strong> {{userMap.description}}</p>
+</div>
+
+<div class="units">
+  <div class="unit"
+       *ngFor="let unit of userMap.units">
+    <div class="container">
+      <h2>{{unit.title}}</h2>
+      <p>{{unit.description}}</p>
+    </div>
+
+    <div class="roles">
+      <div class="role"
+           *ngFor="let role of unit.roles">
+        <div class="container">
+          <h3>{{role.title}}</h3>
+          <p class="creed">"{{role.description}}"</p>
+        </div>
+
+        <div class="user"
+             *ngFor="let user of role.users">
+          <h4>{{user.name}}</h4>
+          <p><strong>Возраст:</strong> {{user.age}}</p>
+          <p><strong>Должность:</strong> {{user.duty}}</p>
+          <p><strong>Интересы:</strong> {{user.hobby}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <router-outlet></router-outlet>

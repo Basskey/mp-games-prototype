@@ -1,5 +1,60 @@
 :host {
   width: 100%;
-  height: 100%;
-  display: block;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .container {
+    margin: 0 auto 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 450px;
+  }
+
+  .units {
+    display: flex;
+    justify-content: space-between;
+
+    .unit {
+      background-color: #cfe6b8;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px;
+
+      .roles {
+        display: flex;
+
+        .role {
+          border-radius: 5px;
+          background-color: #b6cd9f;
+          padding: 10px;
+          margin: 0 5px;
+
+          .creed {
+            font-style: italic;
+            font-size: 12px;
+            line-height: 1.25em;
+            color: #30372b;
+          }
+
+          .user {
+            background-color: #9db487;
+            border-radius: 5px;
+            padding: 10px;
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+
+            p {
+              font-size: 14px;
+              line-height: 1.25em;
+            }
+          }
+        }
+      }
+    }
+  }
 }
