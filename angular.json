@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mp-games-prototype"
+    }
+  },
+  "defaultProject": "mp-games-prototype",
+  "cli": {
+    "analytics": false
+  }
 }
